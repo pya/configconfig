@@ -1,4 +1,4 @@
-from configconfig.main import make_config
+from subconfig.main import make_config
 
 
 def test_make_config():

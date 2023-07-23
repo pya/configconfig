@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "configconfig"
+name = "subconfig"
 version = "0.0.1"
 authors = [
   { name="Mike Müller", email="mmueller@python-academy.de" },
@@ -18,8 +18,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/pya/configconfig"
-"Bug Tracker" = "https://github.com/pya/configconfig/issues"
+"Homepage" = "https://github.com/pya/subconfig"
+"Bug Tracker" = "https://github.com/pya/subconfig/issues"
 
 [project.optional-dependencies]
 build = [
@@ -33,13 +33,13 @@ tests = [
 ]
 
 [tool.hatch.build.targets.sdist]
-packages = ["src/configconfig"]
+packages = ["src/subconfig"]
 
 [tool.hatch.build.targets.wheel]
 include = [
-    "/src/configconfig",
+    "/src/subconfig",
 ]
-packages = ["src/configconfig"]
+packages = ["src/subconfig"]
 
 [tool.hatch.build]
 dev-mode-dirs = ["./src"]
