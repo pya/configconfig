@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "configconfig"
+version = "0.0.1"
+authors = [
+  { name="Mike Müller", email="mmueller@python-academy.de" },
+]
+description = "Configuration of Python Applications"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pya/configconfig"
+"Bug Tracker" = "https://github.com/pya/configconfig/issues"
+
+[project.optional-dependencies]
+build = [
+    "hatch",
+    "build",
+    "twine",
+]
+tests = [
+  "coverage",
+  "pytest",
+]
+
+[tool.hatch.build.targets.sdist]
+packages = ["src/configconfig"]
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "/src/configconfig",
+]
+packages = ["src/configconfig"]
+
+[tool.hatch.build]
+dev-mode-dirs = ["./src"]
